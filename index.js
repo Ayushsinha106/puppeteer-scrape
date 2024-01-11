@@ -124,6 +124,12 @@ app.post("/search", async (req, res) => {
   res.json(response);
 });
 
+app.get("/test", async (req, res) => {
+  const response = await scrapeData("86");
+  console.log(response);
+  res.json(response);
+});
+
 app.get("/", async (req, res) => {
   res.send("hello Ayush");
 });
